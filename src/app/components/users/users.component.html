@@ -1,0 +1,30 @@
+<app-header [usersData]="users"></app-header>
+<br>
+<br>
+<div class="container users-list" *ngIf="!loading">
+  <table class="table">
+    <colgroup>
+      <col width="10%">
+      <col width="*">
+      <col width="30%">
+      <col width="30%">
+    </colgroup>
+    <thead>
+      <tr class="fs-6">
+        <th scope="col">ID</th>
+        <th scope="col">Image</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr [routerLink]="user.id" role="button" *ngFor="let user of users">
+        <th class="align-middle" scope="row">{{user.id}}</th>
+        <td><img [src]="user.avatar" alt="" class="rounded img-fluid"></td>
+        <td>{{user['first_name']}}</td>
+        <td>{{user['last_name']}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-loading *ngIf="loading"></app-loading>

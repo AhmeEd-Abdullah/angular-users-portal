@@ -1,0 +1,18 @@
+.users-list {
+  margin-t0p: 10px;
+}
+
+tbody tr td {
+  vertical-align: middle;
+  font-weight: bold;
+}
+thead tr th {
+  vertical-align: middle;
+  color: #86b7fe;
+}
+
+@media (min-width: 544px) {
+  thead tr th {
+    font-size: 1.3rem;
+  }
+}

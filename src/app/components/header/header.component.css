@@ -1,0 +1,15 @@
+.drop-down {
+  bottom: -65px;
+  left: 0;
+  padding: 5px 10px;
+}
+
+.drop-down.not-found {
+  bottom: -40px;
+}
+
+.rounded-circle {
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}

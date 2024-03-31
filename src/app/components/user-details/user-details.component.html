@@ -1,0 +1,51 @@
+<section class="vh-100" style="background-color: #f4f5f7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100" *ngIf="!loading">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+              <img [src]="userDetails?.avatar" alt="Avatar" class="img-fluid my-5" />
+              <h5 class="text-primary">{{userDetails?.first_name}} {{userDetails?.last_name}}</h5>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6 class="text-primary">Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-9 mb-3">
+                    <h6 class="text-primary">Email</h6>
+                    <p class="text-muted">{{userDetails?.email}}</p>
+                  </div>
+                  <div class="col-3 mb-3">
+                    <h6 class="text-primary">ID</h6>
+                    <p class="text-muted">{{userDetails?.id}}</p>
+                  </div>
+                </div>
+                <h6 class="text-primary">Details</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6 class="text-primary">First Name</h6>
+                    <p class="text-muted">{{userDetails?.first_name}}</p>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6 class="text-primary">Last Name</h6>
+                    <p class="text-muted">{{userDetails?.last_name}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <button type="button" class="btn btn-outline-primary" (click)="goBack()"><i class="bi bi-arrow-left"></i> Go
+          Back</button>
+      </div>
+    </div>
+    <app-loading *ngIf="loading"></app-loading>
+  </div>
+
+</section>
