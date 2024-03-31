@@ -3,7 +3,7 @@
     <a class="navbar-brand fs-4 fw-semibold">Users</a>
     <form class="d-flex flex-column input-group w-auto position-relative">
       <input #search (keyup)="usersSearch(search.value)" type="search" class="form-control w-100 rounded"
-        placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        placeholder="Enter user ID" aria-label="Search" aria-describedby="search-addon" />
       <div *ngIf="userExist">
         <div [routerLink]="user.id" class="position-absolute border border-primary-subtle w-100 rounded drop-down"
           role="button" *ngFor="let user of userSearchResult">
